@@ -1,0 +1,269 @@
+body {
+  margin: 100px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.favButton {
+  background-color: rgba(32, 155, 207, 0.278);
+  padding: 10px;
+  border: none;
+  width: 250px;
+  cursor: pointer;
+  border-radius: 0px 0px 15px 15px;
+  font-size: 15px;
+}
+
+.favButton:hover {
+  background-color: rgba(66, 180, 228, 0.892);
+  box-shadow: rgba(0, 0, 0, 0.25) px 0px 10px 2px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+nav {
+  background-color: rgb(79, 156, 173);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+.navigate {
+  display: flex;
+  gap: 0.4rem;
+}
+
+div>img {
+  width: 150px;
+  margin: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+a:hover {
+  color: rgb(136, 136, 136);
+}
+
+
+
+button:hover {
+  cursor: pointer;
+  color: rgb(63, 62, 62);
+
+}
+
+footer {
+  background-color: rgb(79, 156, 173);
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  width: 100vw;
+  height: 40px;
+  margin-top: 2rem;
+}
+
+footer>img {
+  width: 200px;
+  margin: 0;
+}
+
+footer>p {
+  margin: 0;
+  padding-top: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 28vw;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid rgb(17, 17, 17);
+  border-radius: 25px;
+}
+
+.img {
+  width: 250px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.detailCard {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 45vw;
+  justify-content: inherit;
+
+}
+
+.card {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 233px;
+  padding: 0rem 0.5rem 0 0.5rem;
+  border: 0.5px solid rgb(136, 136, 136);
+  border-radius: 15px;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 25px 5px;
+  border: 0.5px solid rgb(5, 5, 0);
+}
+
+.card-grid {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  width: 65vw;
+  height: auto;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.buttonNav {
+  font-size: 17px;
+  width: 35px;
+  height: 33px;
+
+}
+
+.link {
+
+  width: 20vw;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+  border: 1px solid #ccc;
+
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.dark {
+  background-color: #030000ae;
+  color: white;
+}
+
+.dark .card {
+  background-color: #87949885;
+  color: white;
+}
+
+.dark a {
+  color: white;
+}
+
+.dark .card:hover {
+  box-shadow: rgba(255, 255, 255, 0.572) 0px 0px 25px 5px;
+}
+
+.dark button {
+  color: white;
+  background-color: rgb(79, 156, 173);
+}
+
+.navToggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .link {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    background-color: rgb(79, 156, 173);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: -webkit-fill-avarible;
+    transform: translateX(-101%);
+    transition: 0.3s ease all;
+  }
+
+  .link.open {
+    transform: translateX(0) !important;
+  }
+
+  .hamburg span {
+    display: flex;
+    width: 30px;
+    height: 4px;
+    background: white;
+    margin: 5px;
+    border-radius: 2px;
+    transform-origin: 5px 0px;
+    transition: all 0.2s linear;
+  }
+
+  .navToggle {
+    display: flex !important;
+    align-items: center;
+    margin: 15px;
+    gap: 1rem;
+  }
+
+  .navigate {
+    display: none;
+  }
+
+  .hamburg.open>span {
+    transform: rotate(45deg) translate(0px, 0px);
+  }
+
+  .hamburg.open span:nth-child(2) {
+    display: none;
+  }
+
+  .hamburg.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(-6px, 1px);
+  }
+
+
+}
